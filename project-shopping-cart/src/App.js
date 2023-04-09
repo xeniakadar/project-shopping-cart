@@ -9,36 +9,10 @@ import ProductsPage from './components/ProductsPage';
 import NotFound from './components/NotFound';
 import productData from './productData';
 
-//first do navbar
-//then connect navbar to cart page
-//connect product details to products
-
 const App = () => {
 
-  const [itemsInCart, setItemsInCart] = useState([
-    {
-      id: "1",
-      img: "./images/img1",
-      name: "Grumpy Cat Poster",
-      description: "Everyone's favorite cat who loves to hate",
-      price: 15
-    }
-  ])
+  const [itemsInCart, setItemsInCart] = useState([])
 
-  // const [fakeItem, setFakeItem] = useState([1])
-
-  // function addToCart() {
-  //   const itemToAdd = "hi"
-
-  //   setFakeItem(prevItemsInCart => {
-  //     return ([
-  //       ...prevItemsInCart,
-  //       itemToAdd]
-  //     )
-  //   })
-
-  //   console.log(fakeItem)
-  // }
   function addToCart(productId) {
     const itemToAdd = productData.find(item => productId === item.id)
 
@@ -49,7 +23,6 @@ const App = () => {
       )
     })
   }
-
 
   return (
     <BrowserRouter>
@@ -63,7 +36,7 @@ const App = () => {
         <Route path="/cart" element={<CartPage itemsInCart={itemsInCart} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      </BrowserRouter>
+    </BrowserRouter>
   )
 }
 
