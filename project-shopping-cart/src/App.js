@@ -11,6 +11,7 @@ import productData from './productData';
 
 const App = () => {
 
+  const [subtotalPayment, setSubtotalPayment] = useState(0)
   const [itemsInCart, setItemsInCart] = useState([])
 
   function addToCart(productId) {
@@ -21,6 +22,10 @@ const App = () => {
        [ ...prevItemsInCart,
         itemToAdd]
       )
+    })
+
+    setSubtotalPayment(prevSubtotalPayment => {
+      return prevSubtotalPayment + itemToAdd.price
     })
   }
 
@@ -33,7 +38,7 @@ const App = () => {
           <Route index element={<ProductsPage />} />
           <Route path=':productId' element={<ProductDetails itemsInCart={itemsInCart} addToCart={addToCart}/>} />
         </Route>
-        <Route path="/cart" element={<CartPage itemsInCart={itemsInCart} />} />
+        <Route path="/cart" element={<CartPage itemsInCart={itemsInCart} subtotalPayment={subtotalPayment} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

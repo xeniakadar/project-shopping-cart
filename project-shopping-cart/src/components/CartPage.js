@@ -1,6 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 
-export default function Cart({itemsInCart}) {
+export default function Cart({ itemsInCart, subtotalPayment }) {
+
+
 
   const itemAndQuantityObject = itemsInCart.reduce((allItems, item) => {
     if (!allItems[item.id]) {
@@ -37,7 +39,8 @@ export default function Cart({itemsInCart}) {
       <ul>
         {cartItems}
       </ul>
-      <h4>Subtotal: </h4>
+      {subtotalPayment > 0 && <h4>Total (EUR) €{subtotalPayment} </h4>}
+
     </>
   )
 }
