@@ -1,17 +1,17 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <nav>
       <NavLink to="/">
         Homepage
-      </NavLink>
+      </NavLink><br></br>
       <NavLink to="/products">
         Products
-      </NavLink>
+      </NavLink><br></br>
       <NavLink to="/cart">
-        CartPage
+        Cart ({props.itemsInCart.length})
       </NavLink>
     </nav>
   )
