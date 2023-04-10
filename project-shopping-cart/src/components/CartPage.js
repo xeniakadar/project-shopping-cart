@@ -14,6 +14,7 @@ export default function Cart({ itemsInCart, updateCart, emptyCart, subtotalPayme
         type="number"
         name="cartItems"
         value={item.quantity}
+        min="1"
         onChange={updateCart(item.id)}
       />
       {/* <button onClick={() => addToCart(item.id)}>Add quantity</button> */}
