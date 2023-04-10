@@ -3,42 +3,34 @@
 export default [
   {
       id: "1",
-      img: "./images/img1",
-      name: "Grumpy Cat Poster",
-      description: "Everyone's favorite cat who loves to hate",
-      price: 15
+      img: "./images/white.jpg",
+      img2: "./images/white2.jpg",
+      name: "White Bottle",
+      description: "Our best seller. Simple. Elegant. Cool.",
+      price: 25
   },
   {
       id: "2",
-      img: "./images/img1",
-      name: "Stretch Armstrong",
-      description: "He bends! He stretches! He even ties in knots, but always returns to his original shape!",
-      price: 20
+      img: "./images/tea.jpg",
+      img2: "./images/tea2.jpg",
+      name: "Tea Bottle",
+      description: "This is for our tea lovers who are always on the go. (Also, why drink water when you can drink tea)",
+      price: 30
   },
   {
       id: "3",
-      img: "./images/img1",
-      name: "Hungry Hungry Hippos Game",
-      description: "It's a race, it's a chase, hurry up and feed their face! Who will win? No one knows! Feed the hungry hip-ip-pos!",
-      price: 30
+      img: "./images/metal.jpeg",
+      img2: "./images/metal2.jpg",
+      name: "Metal Bottle",
+      description: "Metal bottle for our metal dudes (and gals). Nothing can destroy this bottle. Nothing.",
+      price: 45
   },
   {
       id: "4",
-      img: "./images/img1",
-      name: "Crossfire board game",
-      description: "You'll get caught up in the crossfire!",
-      price: 35
-  },{
-      id: "5",
-      img: "./images/img1",
-      name: "Hungry Hungry Hippos Game",
-      description: "It's a race, it's a chase, hurry up and feed their face! Who will win? No one knows! Feed the hungry hip-ip-pos!",
-      price: 30
-  },{
-      id: "6",
-      img: "./images/img1",
-      name: "Hungry Hungry Hippos Game",
-      description: "It's a race, it's a chase, hurry up and feed their face! Who will win? No one knows! Feed the hungry hip-ip-pos!",
-      price: 30
+      img: "./images/blue.jpg",
+      img2: "./images/blue2.jpg",
+      name: "Blue Bottle",
+      description: "Just a blue bottle. It looks cool and it's blue!",
+      price: 25
   },
 ]

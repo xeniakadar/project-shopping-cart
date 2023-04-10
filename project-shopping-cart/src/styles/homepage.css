@@ -1,7 +1,9 @@
 .home--container {
+  z-index: 1;
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height:93.75%;
+  height:100%;
   bottom: 0;
 }
 
@@ -10,6 +12,7 @@
   background-image: url('../components/images/about.jpg');
   background-size: cover;
   bottom:0px;
+  z-index: 2;
 
 }
 
@@ -24,6 +27,7 @@
 
 .home--text-container>h1 {
   font-size: 4rem;
+    text-align: center;
 }
 
 .home--text-container>p {
