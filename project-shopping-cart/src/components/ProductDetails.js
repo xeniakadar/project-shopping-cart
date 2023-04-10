@@ -13,7 +13,7 @@ export default function ProductDetails(props) {
       <h1>{thisProduct.price}</h1>
       <p>{thisProduct.description}</p>
       {/*add images */}
-      <button onClick={() => props.addToCart(productId)}>Add to cart</button>
+      <button onClick={() => props.addToCart(thisProduct.id)}>Add to cart</button>
     </div>
   )
 }

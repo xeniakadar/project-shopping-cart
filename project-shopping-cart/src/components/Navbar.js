@@ -11,7 +11,7 @@ export default function Navbar(props) {
         Products
       </NavLink><br></br>
       <NavLink to="/cart">
-        Cart ({props.itemsInCart.length})
+        Cart ({props.quantityOfItems})
       </NavLink>
     </nav>
   )

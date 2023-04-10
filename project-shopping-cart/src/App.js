@@ -12,50 +12,89 @@ import productData from './productData';
 
 const App = () => {
 
-  const [subtotalPayment, setSubtotalPayment] = useState(0)
-  const [itemsInCart, setItemsInCart] = useState([])
+  const [itemsInCart, setItemsInCart] = useState([]);
+  const [subtotalPayment, setSubtotalPayment] = useState(0);
+  const [quantityOfItems, setQuantityOfItems] = useState(0);
 
-
-
-  function addToCart(productId) {
-    const itemToAdd = productData.find(item => productId === item.id);
-
-    setItemsInCart(prevItemsInCart => {
-      return (
-       [ ...prevItemsInCart,
-        itemToAdd]
-      )
-    })
+  function addToCart(id) {
+    const existingItem = itemsInCart.find((inCartItem) => inCartItem.id === id);
+    if (existingItem) {
+      setItemsInCart(
+        itemsInCart.map((item) =>
+          item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+        )
+      );
+    } else {
+      setItemsInCart([...itemsInCart, { id, quantity: 1 }]);
+    }
   }
 
-  function deleteFromCart(productId) {
+  function deleteFromCart(id) {
+    const existingItem = itemsInCart.find((inCartItem) => inCartItem.id === id);
+    if (existingItem.quantity === 1) {
+      setItemsInCart(itemsInCart.filter((item) => item.id !== id));
+    } else {
+      setItemsInCart(
+        itemsInCart.map((item) => {
+          if (id === item.id) {
+            return { ...item, quantity: item.quantity - 1 }
+          } else {
+            return item
+          }
+        })
+      );
+    }
+  }
 
-    setItemsInCart(prevItemsInCart => prevItemsInCart.filter(item => item.id !== productId));
+  const updateCart = (id) => (event) => {
+    setItemsInCart(
+      itemsInCart.map((item) => {
+        if (id === item.id) {
+          return {...item, quantity: Number(event.target.value)}
+        } else {
+          return item
+        }
+      })
+    )
+  }
 
-    // setSubtotalPayment()
+  function emptyCart() {
+    setItemsInCart([])
   }
 
   useEffect(() => {
     let totalPrice = 0;
-    itemsInCart.forEach((item) => {
-      totalPrice += (item.price);
-    }
-    );
-    setSubtotalPayment(totalPrice);
-  },[itemsInCart])
+    let totalQuantity = 0;
 
+    itemsInCart.forEach((item) => {
+      totalPrice += item.quantity * (productData.find((product) => product.id === item.id).price);
+    });
+    setSubtotalPayment(totalPrice);
+
+    itemsInCart.forEach((item) => {
+      totalQuantity += item.quantity
+    })
+    setQuantityOfItems(totalQuantity);
+  },[itemsInCart])
 
 
   return (
     <BrowserRouter>
-      <Navbar itemsInCart={itemsInCart} />
+      <Navbar quantityOfItems={quantityOfItems} />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/products">
-          <Route index element={<ProductsPage />} />
+          <Route index element={<ProductsPage addToCart={addToCart} />} />
           <Route path=':productId' element={<ProductDetails itemsInCart={itemsInCart} addToCart={addToCart}/>} />
         </Route>
-        <Route path="/cart" element={<CartPage itemsInCart={itemsInCart} subtotalPayment={subtotalPayment} deleteFromCart={deleteFromCart} />} />
+        <Route path="/cart" element={<CartPage
+          itemsInCart={itemsInCart}
+          quantityOfItems={quantityOfItems}
+          subtotalPayment={subtotalPayment}
+          deleteFromCart={deleteFromCart}
+          addToCart={addToCart}
+          emptyCart={emptyCart}
+          updateCart={updateCart} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

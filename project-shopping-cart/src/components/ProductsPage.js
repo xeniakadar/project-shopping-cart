@@ -8,7 +8,6 @@ export default function ProductsPage() {
     return (
       <div key={product.id}>
         <h3><NavLink to={`${product.id}`}>{product.name}</NavLink> - €{product.price}</h3>
-        {/* <button>Quick add</button> */}
       </div>
     )
   })
