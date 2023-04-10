@@ -1,6 +1,6 @@
 import React from "react";
 import productData from "../productData";
-import uniqid from 'uniqid';
+
 
 export default function Cart({ itemsInCart, updateCart, emptyCart, subtotalPayment, deleteFromCart, addToCart, quantityOfItems }) {
 
@@ -9,7 +9,6 @@ export default function Cart({ itemsInCart, updateCart, emptyCart, subtotalPayme
     <div key={item.id}>
       {/* <h4>{item.name} - {item.price} - {item.quantity}</h4> */}
       <h1>{productData.find((product) => product.id === item.id).name} -  {productData.find((product) => product.id === item.id).price}</h1>
-      <h3>{item.quantity}</h3>
       <input
         type="number"
         name="cartItems"

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import "./styles/app.css"
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CartPage from './components/CartPage'
@@ -84,8 +85,13 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/products">
-          <Route index element={<ProductsPage addToCart={addToCart} />} />
-          <Route path=':productId' element={<ProductDetails itemsInCart={itemsInCart} addToCart={addToCart}/>} />
+          <Route index element={<ProductsPage
+            addToCart={addToCart} />} />
+          <Route path=':productId' element={
+            <ProductDetails
+              itemsInCart={itemsInCart}
+              addToCart={addToCart}
+            />} />
         </Route>
         <Route path="/cart" element={<CartPage
           itemsInCart={itemsInCart}

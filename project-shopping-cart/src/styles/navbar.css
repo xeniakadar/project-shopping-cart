@@ -1,0 +1,31 @@
+.nav--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #D1E2E6;
+  color: #1e4b55;
+  margin: 0px;
+  padding: 0px;
+  box-shadow: 0 2px 5px rgba(102, 101, 101, 0.3);
+}
+
+.nav--nav-items a.active {
+  color: #4D8F9D;
+}
+
+.cart-img:checked {
+  filter: invert(79%) sepia(6%) saturate(4185%) hue-rotate(153deg) brightness(65%) contrast(79%);
+}
+
+.nav--nav-items {
+  display: flex;
+  align-items: center;
+}
+
+#nav--links {
+  padding: 10px;
+}
+
+.cart-img {
+  height: 20px;
+}

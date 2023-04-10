@@ -10,7 +10,7 @@ export default function ProductDetails(props) {
   return (
     <div key={thisProduct.id}>
       <h1>{thisProduct.name}</h1>
-      <h1>{thisProduct.price}</h1>
+      <h1>€{thisProduct.price}</h1>
       <p>{thisProduct.description}</p>
       {/*add images */}
       <button onClick={() => props.addToCart(thisProduct.id)}>Add to cart</button>
