@@ -13,8 +13,9 @@
   color: #4D8F9D;
 }
 
-.cart-img:checked {
-  filter: invert(79%) sepia(6%) saturate(4185%) hue-rotate(153deg) brightness(65%) contrast(79%);
+.cart-img {
+
+  filter: invert(24%) sepia(30%) saturate(847%) hue-rotate(144deg) brightness(94%) contrast(91%);
 }
 
 .nav--nav-items {
@@ -22,10 +23,24 @@
   align-items: center;
 }
 
-#nav--links {
+.link-cart>h4 {
+  font-weight: 300;
+  padding-left: 5px;
+  color: orange;
+  font-size: 0.9rem;
+}
+
+.nav--links {
   padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cart-img {
   height: 20px;
+}
+
+.nav--logo {
+  padding-left: 15px;
 }

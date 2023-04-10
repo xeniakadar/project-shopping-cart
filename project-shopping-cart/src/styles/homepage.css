@@ -1,3 +1,48 @@
 .home--container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height:93.75%;
+  bottom: 0;
+}
+
+.home--img-container {
+  height: 100%;
+  background-image: url('../components/images/about.jpg');
+  background-size: cover;
+  bottom:0px;
+
+}
+
+.home--text-container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f9fb;
+
+}
+
+.home--text-container>h1 {
+  font-size: 4rem;
+}
+
+.home--text-container>p {
+  font-size: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  text-align: center;
+  font-weight: 200;
+  margin-top: 0px;
+}
+
+.home--btn {
+  height: 80px;
+  width: 200px;
+  border: none;
+  border-radius: 50px;
+  background-color: #1e4b55;
+  color: #D1E2E6;
+  font-family: 'Comfortaa';
+  font-size: 1.2rem;
+  cursor: pointer;
 }

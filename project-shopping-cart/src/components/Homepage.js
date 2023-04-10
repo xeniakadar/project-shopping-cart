@@ -7,13 +7,12 @@ export default function Homepage() {
     <div className="home--container">
       <div className="home--text-container">
         <h1>Cute water bottle</h1>
-        <p>We're laucnhing our cutest water bottle line yet</p>
+        <p>We're launching our cutest water bottle line yet</p>
         <NavLink to="/products">
-          <button>SHOP NOW</button>
+          <button className="home--btn">SHOP NOW</button>
         </NavLink>
       </div>
       <div className="home--img-container">
-        <img src={require('./images/about.jpg')} alt="bottle"/>
       </div>
     </div>
   )
