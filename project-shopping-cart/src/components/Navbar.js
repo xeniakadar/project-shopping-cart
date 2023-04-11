@@ -9,7 +9,7 @@ export default function Navbar(props) {
     <nav className='nav--container'>
       <div className='nav--logo'>
         <NavLink to="/">
-          <h1>LIQR</h1>
+          <h1 className='logo'>L I Q R</h1>
         </NavLink >
       </div>
       <div className='nav--nav-items'>

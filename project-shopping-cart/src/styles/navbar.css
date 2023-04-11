@@ -17,7 +17,6 @@
 }
 
 .cart-img {
-
   filter: invert(24%) sepia(30%) saturate(847%) hue-rotate(144deg) brightness(94%) contrast(91%);
 }
 
@@ -46,4 +45,10 @@
 
 .nav--logo {
   padding-left: 15px;
+  font-size: larger;
+
+}
+
+.logo {
+  margin: 21px;
 }

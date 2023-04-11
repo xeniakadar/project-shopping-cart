@@ -10,10 +10,8 @@ export default function ProductsPage() {
     return (
       <div
         key={product.id}
-        className='productspage--item'
-
->
-
+        className='productspage--item'>
+        <div>
         <NavLink to={`${product.id}`}>
           <img
           className="productpage--images"
@@ -21,6 +19,7 @@ export default function ProductsPage() {
           alt={product.name}
           />
         </NavLink>
+        </div>
         <div className='productspage--details'>
           <h3><NavLink to={`${product.id}`}>{product.name}</NavLink></h3>
           <p>€{product.price}</p>

@@ -7,18 +7,29 @@ export default function ProductDetails(props) {
   const {productId} = useParams();
   const thisProduct = productData.find(data => data.id === productId)
 
+  const [firstImage, setFirstImage] = React.useState(thisProduct.img);
+
   return (
-    <div key={thisProduct.id}>
-      <img
-        className="product--image"
-        src={require(`${thisProduct.img}`)}
-        alt={thisProduct.name}
-      />
+    <div className="product--container" key={thisProduct.id}>
       <div>
-        <h1>{thisProduct.name}</h1>
-        <h1>€{thisProduct.price}</h1>
-        <p>{thisProduct.description}</p>
-        <button onClick={() => props.addToCart(thisProduct.id)}>Add to bag</button>
+        <img
+          className="product--image"
+          src={require(`${firstImage}`)}
+          alt={thisProduct.name}
+          onMouseOver={() => firstImage === thisProduct.img ?
+            setFirstImage(thisProduct.img2) :
+            setFirstImage(thisProduct.img)}
+          onMouseLeave={() => firstImage === thisProduct.img ?
+            setFirstImage(thisProduct.img2) :
+            setFirstImage(thisProduct.img)}
+        />
+
+      </div>
+      <div className="product--info">
+        <h1 className="product--name">{thisProduct.name}</h1>
+        <h1 className="product--price">€{thisProduct.price}</h1>
+        <p className="product--description">{thisProduct.description}</p>
+        <button className="product--btn" onClick={() => props.addToCart(thisProduct.id)}>Add to bag</button>
       </div>
     </div>
   )

@@ -1,0 +1,135 @@
+
+@media only screen and (min-width: 790px) {
+  .cart--container {
+    height: 100%;
+    padding-top: 70px;
+    background-color: #f5f9fb;
+    display: flex;
+    justify-content: space-around;
+
+  }
+
+}
+
+@media only screen and (max-width: 790px) {
+  .cart--container {
+    height: 100%;
+    padding-top: 70px;
+    background-color: #f5f9fb;
+    display: grid;
+    justify-content: space-around;
+
+  }
+}
+
+.cart--image {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.cart--summary {
+  width: 400px;
+  background-color: white;
+  height: 480px;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-left: 40px;
+  text-align: center;
+}
+.cart--empty-container{
+  display: flex;
+  justify-content: center;
+}
+.cart--products {
+display: flex;
+}
+.cart--empty-btn{
+  align-self: center;
+}
+
+.cart--products-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart--mybag {
+  text-align: center;
+}
+
+#cart--input {
+  font-family: 'Comfortaa';
+  width: 28px;
+  height: 20px;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  border: 1px solid rgb(225, 225, 225);
+    margin-left: 7px;
+      margin-right: 7px;
+
+}
+
+.cart--quantity-btn {
+  background-color: #1e4b55;
+    color: #D1E2E6;
+    font-family: 'Comfortaa';
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+
+.cart--empty-btn {
+  height: 60px;
+  width: 200px;
+  border: none;
+  border-radius: 50px;
+  background-color: #55371e;
+  color: #D1E2E6;
+  font-family: 'Comfortaa';
+  font-size: 1.2rem;
+  cursor: pointer;
+
+}
+
+.cart--pricetags {
+  font-weight: 200;
+  margin-top: 5px;
+
+}
+
+.cart--titletags {
+  margin-bottom: 0px;
+}
+
+.cart--checkout {
+  height: 50px;
+  width: 250px;
+  border: none;
+  border-radius: 50px;
+  background-color: #1e4b55;
+  color: #D1E2E6;
+  font-family: 'Comfortaa';
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.cart--checkoutpaypal {
+  height: 50px;
+  width: 250px;
+  border: none;
+  border-radius: 50px;
+  background-color: #009cde;
+  color: #D1E2E6;
+  font-family: 'Comfortaa';
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.cart--checkoutpaypal>span {
+  font-style: italic;
+}
