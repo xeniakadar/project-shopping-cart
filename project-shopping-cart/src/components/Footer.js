@@ -14,7 +14,8 @@ export default function Footer(props) {
           placeholder='example@email.com'
         />
         <button onClick={() => props.addFreeShipping()} className='footer-signupbtn'>submit</button>
-
+        <p className='photo-info'>photos used are from <a href="https://unsplash.com/@bluewaterglobe?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bluewater Sweden</a> on <a href="https://unsplash.com/photos/4Kd3svPFuEI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  </p>
       </div>
       <div className='footer--info'>
         <div className='footer--infolinks'>
