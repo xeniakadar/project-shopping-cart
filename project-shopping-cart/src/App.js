@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import "./styles/app.css"
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import CartPage from './components/CartPage'
 import Homepage from './components/Homepage'
 import Navbar from './components/Navbar'
@@ -93,7 +93,7 @@ const App = () => {
 
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar quantityOfItems={quantityOfItems} />
       <Routes>
         <Route path="/" element={<Homepage />} />
@@ -120,7 +120,7 @@ const App = () => {
         <Route path='/purchase-successful' element={<Purchase />} />
       </Routes>
       <Footer addFreeShipping={addFreeShipping}/>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
