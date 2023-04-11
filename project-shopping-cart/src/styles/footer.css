@@ -3,6 +3,9 @@
   color: #D1E2E6;
   display: flex;
   justify-content: space-between;
+
+  bottom: 0;
+  width: 100%;
 }
 
 .footer--info {
