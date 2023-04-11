@@ -1,0 +1,46 @@
+.footer--container {
+  background-color: #1e4b55;
+  color: #D1E2E6;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer--info {
+  display: flex;
+}
+
+.footer--infolinks {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.footer--signup{
+  padding-left: 15px;
+}
+
+.footer--signup > input {
+  border: none;
+  border-radius: 20px;
+  height: 20px;
+  width: 200px;
+  padding-left: 5px;
+  font-style: italic;
+
+}
+
+::placeholder {
+  color: lightgray;
+}
+
+.footer-signupbtn {
+  height: 30px;
+  width: 80px;
+  border: none;
+  border-radius: 50px;
+  background-color:#D1E2E6 ;
+  color: #1e4b55;
+  font-family: 'Comfortaa';
+  font-size: 0.7rem;
+  cursor: pointer;
+  margin-left: 10px;
+}

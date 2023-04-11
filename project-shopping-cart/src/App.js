@@ -9,6 +9,8 @@ import ProductDetails from './components/ProductDetails'
 import ProductsPage from './components/ProductsPage';
 import NotFound from './components/NotFound';
 import productData from './productData';
+import Purchase from './components/Purchase'
+import Footer from './components/Footer'
 
 
 const App = () => {
@@ -16,6 +18,7 @@ const App = () => {
   const [itemsInCart, setItemsInCart] = useState([]);
   const [subtotalPayment, setSubtotalPayment] = useState(0);
   const [quantityOfItems, setQuantityOfItems] = useState(0);
+  const [freeShipping, setFreeShipping] = useState(false)
 
   function addToCart(id) {
     const existingItem = itemsInCart.find((inCartItem) => inCartItem.id === id);
@@ -63,9 +66,19 @@ const App = () => {
     setItemsInCart([])
   }
 
+  function addFreeShipping() {
+    if (!freeShipping) {
+      setFreeShipping(true)
+    }
+  }
+
   useEffect(() => {
     let totalPrice = 0;
     let totalQuantity = 0;
+
+    if (freeShipping === false) {
+      totalPrice += 15
+    }
 
     itemsInCart.forEach((item) => {
       totalPrice += item.quantity * (productData.find((product) => product.id === item.id).price);
@@ -76,7 +89,7 @@ const App = () => {
       totalQuantity += item.quantity
     })
     setQuantityOfItems(totalQuantity);
-  },[itemsInCart])
+  },[itemsInCart, freeShipping])
 
 
   return (
@@ -100,9 +113,13 @@ const App = () => {
           deleteFromCart={deleteFromCart}
           addToCart={addToCart}
           emptyCart={emptyCart}
-          updateCart={updateCart} />} />
+          updateCart={updateCart}
+
+          freeShipping={freeShipping} />} />
         <Route path="*" element={<NotFound />} />
+        <Route path='/purchase-successful' element={<Purchase />} />
       </Routes>
+      <Footer addFreeShipping={addFreeShipping}/>
     </BrowserRouter>
   )
 }
