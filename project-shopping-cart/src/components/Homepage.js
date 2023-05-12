@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "../styles/homepage.css"
+import "../styles/homepage.css";
 
 export default function Homepage() {
   return (

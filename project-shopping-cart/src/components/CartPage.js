@@ -39,22 +39,16 @@ export default function Cart({ itemsInCart, freeShipping, updateCart, emptyCart,
 
   })
 
-  console.log(freeShipping)
-//name, price, quantity
-  //shipping 15
-  //if free shipping true
-  //shipping 0 (thanks for signing up)
-  //automatically add
-
   return (
     <div className="cart--container">
       {itemsInCart.length === 0 &&  <h1 className="cart--empty">Your cart is Empty</h1>}
       {itemsInCart.length > 0 &&
         <div className="cart--products-container">
           <h1 className="cart--mybag">My Bag</h1>
-            <ul>
-              {cartItems}
-            </ul>
+        <hr className="cart--hr"/>
+          <ul>
+            {cartItems}
+          </ul>
           <button className="cart--empty-btn" onClick={() => emptyCart()}>Empty Cart</button>
         </div>}
       <div>
@@ -69,11 +63,9 @@ export default function Cart({ itemsInCart, freeShipping, updateCart, emptyCart,
               </>
             }
 
-
           </span>
           {summaryItems}
           <hr />
-
 
           <h1>Order Total €{subtotalPayment}</h1>
           <NavLink to="/purchase-successful">

@@ -1,42 +1,35 @@
-.product--image {
-  height: 800px;
-  width: 600px;
-  object-fit: cover;
-  border-radius: 70px;
-  padding: 20px;
-}
-
 @media only screen and (min-width: 790px) {
   .product--container {
       display: flex;
       padding-top: 80px;
-    }
+      height: 100%;
+  }
 }
 
-@media only screen and (max-width: 790px) {
-  .product--container {
-    display: grid;
-    padding-top: 80px;
-  }
-
-  .product--info {
-    padding-left: 20px;
-    padding-right: 20px
-  }
+.product--image {
+  height: 700px;
+  width: 500px;
+  object-fit: cover;
+  border-radius: 2px;
+  margin-top: 2em;
+  margin-left: 2em;
 }
 
 .product--title {
   padding-bottom: 20px;
 }
+
 .product--price {
   font-weight: 200;
   font-size: 1.7rem;
-
 }
 
 .product--info {
   padding-top: 10px;
   padding-bottom: 20px;
+  margin-left: 2em;
+  margin-bottom: 3.5em;
+
 }
 .product--description {
   padding-bottom: 20px;
@@ -52,5 +45,41 @@
   font-family: 'Comfortaa';
   font-size: 1.2rem;
   cursor: pointer;
+
+}
+
+@media (max-width: 450px) {
+
+  .product--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .product--image {
+    height: 400px;
+    width: 300px;
+    margin: 0px;
+    margin-top: 1.4em;
+  }
+
+  .product--info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+  }
+
+  .product--info h1 {
+    padding: 0.2em;
+    margin: 0px;
+  }
+  .product--info p {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    font-size: large;
+
+  }
 
 }

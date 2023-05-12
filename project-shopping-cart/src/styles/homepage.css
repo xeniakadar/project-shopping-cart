@@ -12,7 +12,7 @@
   background-image: url('../components/images/about.jpg');
   background-size: cover;
   bottom:0px;
-  z-index: 2;
+  /* z-index: 2; */
 
 }
 
@@ -49,4 +49,33 @@
   font-family: 'Comfortaa';
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  .home--container {
+      z-index: 1;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr;
+      height: 100vh;
+      bottom: 0;
+    }
+
+    .home--text-container>h1 {
+      font-size: 3rem;
+
+    }
+    .home--text-container>p {
+      font-size: 1.4rem;
+    }
+
+    .home--img-container {
+      background-image: none;
+      background-color: #f5f9fb;
+
+      /* z-index: 2; */
+
+    }
+
+
 }

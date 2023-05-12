@@ -2,6 +2,7 @@ import React from 'react'
 import productData from '../productData';
 import { NavLink } from 'react-router-dom';
 import "../styles/productspage.css"
+import Footer from './Footer';
 
 
 export default function ProductsPage() {
@@ -30,8 +31,6 @@ export default function ProductsPage() {
 
   return (
     <div className='productspage--container'>
-      <div className='productspage--mainimage'>
-      </div>
       <div>
         <h1 className='productspage--title'>Our Bottles</h1>
         <div className='productspage--info'>

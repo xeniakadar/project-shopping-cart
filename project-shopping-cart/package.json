@@ -1,5 +1,6 @@
 {
   "name": "project-shopping-cart",
+  "homepage": "http:/xeniakadar.github.io/project-shopping-cart",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -42,6 +43,5 @@
   "devDependencies": {
     "file-loader": "^6.2.0",
     "gh-pages": "^5.0.0"
-  },
-  "homepage": "http:/xeniakadar.github.io/project-shopping-cart"
+  }
 }

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import "./styles/app.css"
 import { useState } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
+
 import CartPage from './components/CartPage'
 import Homepage from './components/Homepage'
 import Navbar from './components/Navbar'
@@ -93,34 +94,34 @@ const App = () => {
 
 
   return (
-    <HashRouter>
-      <Navbar quantityOfItems={quantityOfItems} />
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/products">
-          <Route index element={<ProductsPage
-            addToCart={addToCart} />} />
-          <Route path=':productId' element={
-            <ProductDetails
-              itemsInCart={itemsInCart}
-              addToCart={addToCart}
-            />} />
-        </Route>
-        <Route path="/cart" element={<CartPage
-          itemsInCart={itemsInCart}
-          quantityOfItems={quantityOfItems}
-          subtotalPayment={subtotalPayment}
-          deleteFromCart={deleteFromCart}
-          addToCart={addToCart}
-          emptyCart={emptyCart}
-          updateCart={updateCart}
+    <>
+    <Navbar quantityOfItems={quantityOfItems} />
+    <Routes>
+      <Route path="/" element={<Homepage />} />
+      <Route path="/products">
+        <Route index element={<ProductsPage
+          addToCart={addToCart} />} />
+        <Route path=':productId' element={
+          <ProductDetails
+            itemsInCart={itemsInCart}
+            addToCart={addToCart}
+          />} />
+      </Route>
+      <Route path="/cart" element={<CartPage
+        itemsInCart={itemsInCart}
+        quantityOfItems={quantityOfItems}
+        subtotalPayment={subtotalPayment}
+        deleteFromCart={deleteFromCart}
+        addToCart={addToCart}
+        emptyCart={emptyCart}
+        updateCart={updateCart}
+        freeShipping={freeShipping} />} />
+      <Route path="*" element={<NotFound />} />
+      <Route path='/purchase-successful' element={<Purchase />} />
+    </Routes>
+    <Footer addFreeShipping={addFreeShipping}/>
 
-          freeShipping={freeShipping} />} />
-        <Route path="*" element={<NotFound />} />
-        <Route path='/purchase-successful' element={<Purchase />} />
-      </Routes>
-      <Footer addFreeShipping={addFreeShipping}/>
-    </HashRouter>
+    </>
   )
 }
 
