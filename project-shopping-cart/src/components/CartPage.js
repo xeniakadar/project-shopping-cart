@@ -13,7 +13,7 @@ export default function Cart({ itemsInCart, freeShipping, updateCart, emptyCart,
       <div>
         <h2 className="cart--titletags">{productData.find((product) => product.id === item.id).name}</h2>
         <h3 className="cart--pricetags">€{productData.find((product) => product.id === item.id).price}</h3>
-      <div>
+      <div className="cart--products-count">
         <button className="cart--quantity-btn" onClick={() => deleteFromCart(item.id)}>-</button>
           <input
             id="cart--input"
