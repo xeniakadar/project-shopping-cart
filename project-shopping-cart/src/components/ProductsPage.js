@@ -31,7 +31,8 @@ export default function ProductsPage() {
 
   return (
     <div className='productspage--container'>
-      <div>
+      <div className='productspage--col1'></div>
+      <div className='prouductspage--col2'>
         <h1 className='productspage--title'>Our Bottles</h1>
         <div className='productspage--info'>
           {productDataList}

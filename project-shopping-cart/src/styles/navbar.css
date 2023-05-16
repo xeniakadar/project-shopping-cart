@@ -9,6 +9,7 @@
   box-shadow: 0 3px 5px rgba(102, 101, 101, 0.3);
   z-index: 3;
   width: 100%;
+  height: 4.3em;
 }
 
 .nav--nav-items a.active {
@@ -36,11 +37,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .cart-img {
-  height: 20px;
+  height: 25px;
 }
 
 .menu--img, .close--img {

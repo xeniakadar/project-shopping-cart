@@ -1,8 +1,9 @@
 @media only screen and (min-width: 790px) {
   .product--container {
       display: flex;
-      padding-top: 80px;
       height: 100%;
+      padding-bottom: 3em;
+      padding-top: 1em;
   }
 }
 
@@ -13,6 +14,11 @@
   border-radius: 2px;
   margin-top: 2em;
   margin-left: 2em;
+
+}
+
+.product--image:hover {
+
 }
 
 .product--title {
@@ -28,7 +34,7 @@
   padding-top: 10px;
   padding-bottom: 20px;
   margin-left: 2em;
-  margin-bottom: 3.5em;
+  margin-bottom: 2em;
 
 }
 .product--description {
