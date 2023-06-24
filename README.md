@@ -9,7 +9,7 @@ Checkout the <a href='https://xeniakadar.github.io/project-shopping-cart/' targe
 
 <h2>Showcase</h2>
 
-The images and the GIF are a great illustration to how the page works - the user starts at the homepage and is directed to the products page. There, users can select products, add them to the cart and checkout once they're ready.
+The images and the GIF are a great illustration to how the page works - the user starts at the homepage and is directed to the products page. There, users can select products, add them to the cart and checkout once they're ready. I also used the mobile-first approach when writing the CSS for the app.
 
 <img src="./project-shopping-cart/src/screenshots/bottleaction.gif" width="800px">
 <img src="./project-shopping-cart/src/screenshots/homepage.png" alt="homepage" width="800px">
