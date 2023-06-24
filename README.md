@@ -11,19 +11,19 @@ Checkout the <a href='https://xeniakadar.github.io/project-shopping-cart/' targe
 
 The images and the GIF are a great illustration to how the page works - the user starts at the homepage and is directed to the products page. There, users can select products, add them to the cart and checkout once they're ready.
 
-<img src="./src/screenshots/bottleaction.gif" width="800px">
-<img src="./src/screenshots/homepage.png" alt="homepage" width="800px">
-<img src="./src/screenshots/products.png" width="800px">
-<img src="./src/screenshots/product.png" width="800px">
-<img src="./src/screenshots/cart.png" width="800px">
-<img src="./src/screenshots/mobile1.png" width="400px">
-<img src="./src/screenshots/mobile2.png" width="400px">
+<img src="./project-shopping-cart/src/screenshots/bottleaction.gif" width="800px">
+<img src="./project-shopping-cart/src/screenshots/homepage.png" alt="homepage" width="800px">
+<img src="./project-shopping-cart/src/screenshots/products.png" width="800px">
+<img src="./project-shopping-cart/src/screenshots/product.png" width="800px">
+<img src="./project-shopping-cart/src/screenshots/cart.png" width="800px">
+<img src="./project-shopping-cart/src/screenshots/mobile1.png" width="400px">
+<img src="./project-shopping-cart/src/screenshots/mobile2.png" width="400px">
 
 <h2>Performance</h2>
 
 I used Google Lighthouse to run over my application to check its performance, accessibility, use of best practives and SEO opitimization.
 
-<img src="./src/screenshots/Lighthouse.png" width="800px">
+<img src="./project-shopping-cart/src/screenshots/Lighthouse.png" width="800px">
 
 <h2>Tech Stack</h2>
 <ul>
