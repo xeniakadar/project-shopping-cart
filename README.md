@@ -33,6 +33,12 @@ I used Google Lighthouse to run over my application to check its performance, ac
 <li>Git</li>
 </ul>
 
+<h2>What I learned</h2>
+
+<ul>
+<li>Organizing and connecting a project with React Router Dom</li>
+</ul>
+
 
 <h2>Credits</h2>
 All rights to all pictures and products on this website belong to the respective publishers. This page is not being used commercially. If you are an owner of the copyrighted material, please let me know if you have any issues with this page and I'll take it down immediately.
